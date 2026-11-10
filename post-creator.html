@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Creator - Lesson 12</title>
+    <link rel="stylesheet" href="post-creator.css">
+    <script src="post-creator.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <h1>Create a New Post</h1>
+        <p>Write and submit your post using the POST request.</p>
+
+        <form id="post-form">
+            <label for="title">Post Title</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter post title"
+                required
+            >
+
+            <label for="body">Post Content</label>
+            <textarea
+                id="body"
+                placeholder="Write your post..."
+                rows="5"
+                required
+            ></textarea>
+
+            <label for="userId">User ID</label>
+            <input
+                type="number"
+                id="userId"
+                value="1"
+                min="1"
+                required
+            >
+
+            <button type="submit" id="submit-button">
+                Create Post
+            </button>
+        </form>
+
+        <p id="message"></p>
+
+        <section id="result" class="hidden">
+            <h2>Created Post</h2>
+            <div id="post-details"></div>
+        </section>
+    </main>
+</body>
+</html>
